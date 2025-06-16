@@ -1,120 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
+/* General Styling */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    background: #f0f2f5;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
-.container {
-    max-width: 600px;
-    width: 100%;
-    background: #fff;
-    padding: 25px 40px;
+.container, .wish-container {
+    background: white;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
 }
 
+/* Form Styling */
 h1 {
-    text-align: center;
-    color: #4a4a4a;
-    margin-bottom: 10px;
-}
-
-p {
-    text-align: center;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.form-group {
+    color: #333;
     margin-bottom: 20px;
 }
 
-.form-group label {
+label {
     display: block;
+    text-align: left;
+    margin-top: 15px;
     margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.form-group input[type="text"],
-.form-group textarea,
-.form-group input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.form-group input[type="file"] {
-    padding: 5px;
-}
-
-textarea {
-    resize: vertical;
-}
-
-button {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #4cae4c;
-}
-
-#link-container {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #e8f5e9;
-    border: 1px solid #c8e6c9;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.hidden {
-    display: none;
-}
-
-.generated-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    word-break: break-all;
-}
-
-.generated-link a {
-    color: #0275d8;
-    text-decoration: none;
+    color: #555;
     font-weight: bold;
 }
 
-#copyButton {
-    width: auto;
-    padding: 8px 15px;
-    background-color: #0275d8;
-    font-size: 14px;
-    margin-left: 10px;
+input[type="text"], input[type="date"], textarea, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Important */
 }
 
-#copyButton:hover {
-    background-color: #025aa5;
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Result and Share Box */
+#result {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+.hidden { display: none; }
+.share-box { display: flex; margin-bottom: 15px; }
+#shortUrl { flex-grow: 1; border-right: none; background: #eee; }
+#copyBtn { width: auto; margin: 0; border-radius: 0 5px 5px 0; }
+
+.share-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 5px;
+}
+.whatsapp { background-color: #25D366; }
+
+/* Wish Page Styling */
+.wish-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    border: 2px dashed #ff69b4;
+    padding: 20px;
+}
+
+.birthday-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.share-options {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.ad-space {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    color: #888;
 }
